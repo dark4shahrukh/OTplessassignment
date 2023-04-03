@@ -5,9 +5,10 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="login-box">
+	<div id="otpless"></div>
+	<div id="login-box-id" class="login-box">
 		<h1>Login</h1>
-		<form action="welcome.html">
+		<form action="/">
 			<label for="username">Username</label>
 			<input type="text" id="username" name="username" placeholder="Enter username">
 			<label for="password">Password</label>
@@ -15,7 +16,7 @@
 			<input type="submit" value="Login">
 		</form>
 		<p>or</p>
-		<div id="otpless"></div>
+		
 		<script type="text/javascript" src="https://otpless.com/auth.js"></script>
 		<!-- Get user's whatsapp number and name -->
 		<script type="text/javascript">
@@ -27,6 +28,7 @@
 					<h2>Hi ${waName} welcome !</h2>
 					<h2>${waNumber}</h2>
 				`;
+				document.getElementById('login-box-id').display=none;
 				//window.location.href = "welcome.html";
 			}
 		</script>
